@@ -15,7 +15,6 @@ code {
 @tailwind components;
 @tailwind utilities;
 
-
 /* from https://codepen.io/P1N2O/pen/pyBNzX */
 
 .grad-bg {
@@ -37,6 +36,10 @@ code {
     }
 }
 
-.max-height{
-  height: 100vh !important;
+.max-height {
+    height: 100vh !important;
+}
+
+.sidebar-shadow {
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
 }

@@ -1,18 +1,21 @@
-import React, { createContext, useContext } from "react";
-import { data, ScrapedData } from "../assets/scraped-data/output";
+import { createContext, useContext } from "react";
+import { data } from "../assets/scraped-data/output";
+import { getUrlToTypeTable } from "../assets/scraped-data/urlToDataVizType";
+import { ChildrenOnlyProps, DVContextType, Nullable } from "../models";
 
-interface ChildrenOnlyProps {
-    children: React.ReactNode;
-}
+const DVContext = createContext<Nullable<DVContextType>>(null);
 
-type Nullable<T> = T | null;
-
-const DVContext = createContext<Nullable<ScrapedData[]>>(null);
+const UrlToTypeMAP = getUrlToTypeTable();
 
 export const useDVContext = () => {
-    useContext(DVContext);
+    return useContext(DVContext);
 };
 
 export function DataVizContext({ children }: ChildrenOnlyProps) {
-    return <DVContext.Provider value={data}>{children}</DVContext.Provider>;
+    const value = {
+        data: data,
+        UrlToTypeMAP,
+    };
+
+    return <DVContext.Provider value={value}>{children}</DVContext.Provider>;
 }

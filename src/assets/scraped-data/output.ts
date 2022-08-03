@@ -1,13 +1,4 @@
-export interface ScrapedData {
-    type: string;
-    descriptions: {
-        type: string;
-        text: string;
-    }[];
-    functions: string[];
-    imgName: string;
-    imgExt: string[];
-}
+import { ScrapedData } from "../../models";
 
 export const data: ScrapedData[] = [
     {
