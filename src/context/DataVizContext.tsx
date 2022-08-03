@@ -1,6 +1,6 @@
 import { createContext, useContext } from "react";
-import { data } from "../assets/scraped-data/output";
-import { getUrlToTypeTable } from "../assets/scraped-data/urlToDataVizType";
+import { data } from "../output";
+import { getUrlToTypeTable } from "../urlToDataVizType";
 import { ChildrenOnlyProps, DVContextType, Nullable } from "../models";
 
 const DVContext = createContext<Nullable<DVContextType>>(null);

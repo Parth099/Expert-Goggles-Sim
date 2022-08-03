@@ -1,4 +1,4 @@
-import { ScrapedData } from "../../models";
+import { ScrapedData } from "./models";
 
 export const data: ScrapedData[] = [
     {
