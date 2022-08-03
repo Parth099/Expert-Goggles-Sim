@@ -36,8 +36,8 @@ export default function Sidebar(props: SidebarProps) {
         //if null do nothing
         if (!sideBarData) return;
 
-        const mainImgPath = `/assets/scraped-data/img/mainImg/${sideBarData?.imgName}.${sideBarData?.imgExt[0]}`;
-        const anatImgPath = `/assets/scraped-data/img/anatomyImg/${sideBarData?.imgName}.${sideBarData?.imgExt[0]}`;
+        const mainImgPath = `/Expert-Goggles-Sim/assets/scraped-data/img/mainImg/${sideBarData?.imgName}.${sideBarData?.imgExt[0]}`;
+        const anatImgPath = `/Expert-Goggles-Sim/assets/scraped-data/img/anatomyImg/${sideBarData?.imgName}.${sideBarData?.imgExt[0]}`;
 
         import(mainImgPath).then((val) => {
             setMainImg(val.default);
