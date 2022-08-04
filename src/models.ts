@@ -11,8 +11,8 @@ export interface ScrapedData {
         text: string;
     }[];
     functions: string[];
-    imgName: string;
-    imgExt: string[];
+    mainImgLink: string;
+    anatImgLink: string;
 }
 
 export interface DVContextType {

@@ -6,13 +6,16 @@ import Sidebar from "./Sidebar";
 function Simulator() {
     const [url, setUrl] = useState("");
     const [displaySidebar, setDisplaySidebar] = useState(false);
+    const [showOpener, setShowOpener] = useState(false);
     const search = useSearchParams();
     const location = useLocation();
 
     useEffect(() => {
         const url = location.pathname.substring(1); //props exists or else this page would NEVER load
         setUrl(url);
-        console.log(url, search);
+        const timeout = setTimeout(() => {
+            setShowOpener(true);
+        }, 2000);
     }, [location, search]);
 
     return (
@@ -31,10 +34,12 @@ function Simulator() {
                     setDisplaySidebar((state) => !state);
                 }}
             >
-                <div className="bg-[#3d3d3e] py-2 px-3 text-white rounded-lg text-xl readable-font text-left shadow-xl">
-                    <strong>Expert Goggles</strong>
-                    <p>Click to {displaySidebar ? "close" : "open"} guide</p>
-                </div>
+                {showOpener && (
+                    <div className="bg-[#3d3d3e] py-2 px-3 text-white rounded-lg text-xl readable-font text-left shadow-xl">
+                        <strong>Expert Goggles</strong>
+                        <p>Click to {displaySidebar ? "close" : "open"} guide</p>
+                    </div>
+                )}
             </button>
         </div>
     );
