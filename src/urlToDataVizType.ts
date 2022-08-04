@@ -8,6 +8,10 @@ const urlToType: Mapping[] = [
         url: "https://pudding.cool/2021/08/nba-carry/",
         type: "Scatter Plot",
     },
+    {
+        url: "https://www.nytimes.com/interactive/2021/world/covid-cases.html",
+        type: "Area Graph",
+    },
 ];
 
 export const getUrlToTypeTable = () => {

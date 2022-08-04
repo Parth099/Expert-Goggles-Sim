@@ -13,8 +13,6 @@ export default function Sidebar(props: SidebarProps) {
     const DV_Data = useDVContext();
 
     const [sideBarData, setSideBarData] = useState<Nullable<ScrapedData>>(null);
-    // const [mainImg, setMainImg] = useState<any>();
-    // const [anatImg, setAnatImg] = useState<any>();
     const [isLimitActive, updateLimit] = useState(true);
     const [displayText, setDisplayText] = useState("");
 
@@ -28,6 +26,7 @@ export default function Sidebar(props: SidebarProps) {
         setSideBarData(DV_Data.data[index]);
 
         //depends on the load of the vars below
+        console.log(TYPE);
     }, [props.url, DV_Data]);
 
     return (

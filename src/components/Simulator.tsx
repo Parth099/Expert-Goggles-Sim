@@ -5,19 +5,24 @@ import Sidebar from "./Sidebar";
 
 function Simulator() {
     const [url, setUrl] = useState("");
+    // const [ext, setExt] = useState("");
     const [displaySidebar, setDisplaySidebar] = useState(false);
     const [showOpener, setShowOpener] = useState(false);
     const search = useSearchParams();
     const location = useLocation();
 
     useEffect(() => {
-        const url = location.pathname.substring(1); //props exists or else this page would NEVER load
+        let url = location.pathname.substring(1); //props URL exists or else this page would NEVER load
+
+        if (url.charAt(url.length - 1) === "$") {
+            url = url.replace("$", ".html");
+        }
         setUrl(url);
+
         const timeout = setTimeout(() => {
             setShowOpener(true);
         }, 2000);
     }, [location, search]);
-
     return (
         <div className="flex relative">
             <iframe src={url} className="w-full max-height"></iframe>

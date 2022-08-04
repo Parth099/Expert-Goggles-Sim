@@ -26,4 +26,24 @@ export const data: ScrapedData[] = [
         mainImgLink: "https://imgur.com/BLWCcA9.png",
         anatImgLink: "https://imgur.com/wkTCONm.png",
     },
+    {
+        type: "Area Graph",
+        descriptions: [
+            {
+                type: "p",
+                text: "Area Graphs are Line Graphs but with the area below the line filled in with a certain colour or texture. Area Graphs are drawn by first plotting data points on a Cartesian coordinate grid, joining a line between the points and finally filling in the space below the completed line.",
+            },
+            {
+                type: "p",
+                text: "Like Line Graphs, Area Graphs are used to display the development of quantitative values over an interval or time period. They are most commonly used to show trends, rather than convey specific values.",
+            },
+            {
+                type: "p",
+                text: "Two popular variations of Area Graphs are: grouped and Stacked Area Graphs. Grouped Area Graphs start from the same zero axis, while Stacked Area Graphs have each data series start from the point left by the previous data series.",
+            },
+        ],
+        functions: ["Patterns", "Data over time"],
+        mainImgLink: "https://i.imgur.com/xAT2eVm.png",
+        anatImgLink: "https://i.imgur.com/sBP6wRB.png",
+    },
 ];
